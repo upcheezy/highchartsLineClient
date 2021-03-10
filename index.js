@@ -15,6 +15,11 @@ function createChart(DamageCount18, DamageCount19, DamageCount20, DamageCount21)
                 text: 'Damages'
             }
         },
+        plotOptions: {
+            series: {
+                lineWidth: 5
+            }
+        },
         series: [{
             name: '2018',
             data: DamageCount18
@@ -29,7 +34,50 @@ function createChart(DamageCount18, DamageCount19, DamageCount20, DamageCount21)
             data: DamageCount21
         }]
     });
-    radioButtons(chart);
+
+    const barchart = Highcharts.chart('barchart', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Member Reported Damages'
+        },
+        xAxis: {
+            categories: ['2018', '2019', '2020', '2021']
+        },
+        yAxis: {
+            title: {
+                text: 'Damages'
+            }
+        },
+        plotOptions: {
+            series: {
+                grouping: false
+            }
+        },
+        series: [{
+            name: '2018',
+            data: [
+                [0, 4398]
+            ]
+        }, {
+            name: '2019',
+            data: [
+                [1, 4216]
+            ]
+        }, {
+            name: '2020',
+            data: [
+                [2, 3117]
+            ]
+        }, {
+            name: '2021',
+            data: [
+                [3, 221]
+            ]
+        }]
+    });
+    radioButtons(chart, barchart);
 }
 
 async function fetchData() {
@@ -48,7 +96,6 @@ async function fetchData() {
     return [member18, member19, member20, member21]
 }
 
-eDamageCount = []
 mDamageCount18 = []
 mDamageCount19 = []
 mDamageCount20 = []
@@ -76,48 +123,60 @@ fetchData().then(([member18, member19, member20, member21]) => {
     createChart(mDamageCount18, mDamageCount19, mDamageCount20, mDamageCount21);
 })
 
-function radioButtons(chart) {
+function radioButtons(chart, barchart) {
     document.getElementById('2018').addEventListener('click', e => {
         let series = chart.series[0];
-        console.log('clicked')
+        let barSeries = barchart.series[0]
         if (series.visible) {
             series.hide();
+            barSeries.hide();
             e.target.innerHTML = 'Show series';
         } else {
             series.show();
+            barSeries.show();
+            barchart.series[0].addPoint(barSeries);
             e.target.innerHTML = 'Hide series';
         }
     })
     document.getElementById('2019').addEventListener('click', e => {
         let series = chart.series[1];
+        let barSeries = barchart.series[1]
         console.log('clicked')
         if (series.visible) {
             series.hide();
+            barSeries.hide();
             e.target.innerHTML = 'Show series';
         } else {
             series.show();
+            barSeries.show();
             e.target.innerHTML = 'Hide series';
         }
     })
     document.getElementById('2020').addEventListener('click', e => {
         let series = chart.series[2];
+        let barSeries = barchart.series[2]
         console.log('clicked')
         if (series.visible) {
             series.hide();
+            barSeries.hide();
             e.target.innerHTML = 'Show series';
         } else {
             series.show();
+            barSeries.show();
             e.target.innerHTML = 'Hide series';
         }
     })
     document.getElementById('2021').addEventListener('click', e => {
-        let series = chart.series[2];
+        let series = chart.series[3];
+        let barSeries = barchart.series[3]
         console.log('clicked')
         if (series.visible) {
             series.hide();
+            barSeries.hide();
             e.target.innerHTML = 'Show series';
         } else {
             series.show();
+            barSeries.show();
             e.target.innerHTML = 'Hide series';
         }
     })
