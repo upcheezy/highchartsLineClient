@@ -82,10 +82,10 @@ function createChart(DamageCount18, DamageCount19, DamageCount20, DamageCount21)
 
 async function fetchData() {
     const [member_response18, member_response19, member_response20, member_response21] = await Promise.all([
-        fetch('http://localhost:8000/memberdamage?year=2018'),
-        fetch('http://localhost:8000/memberdamage?year=2019'),
-        fetch('http://localhost:8000/memberdamage?year=2020'),
-        fetch('http://localhost:8000/memberdamage?year=2021')
+        fetch('http://10.20.18.58:83/memberdamage?year=2018'),
+        fetch('http://10.20.18.58:83/memberdamage?year=2019'),
+        fetch('http://10.20.18.58:83/memberdamage?year=2020'),
+        fetch('http://10.20.18.58:83/memberdamage?year=2021')
     ])
 
     const member18 = await member_response18.json();
