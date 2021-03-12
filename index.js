@@ -1,6 +1,6 @@
 function createChart(DamageCount18, DamageCount19, DamageCount20, DamageCount21) {
     console.log('DOM fully loaded and parsed');
-    const chart = Highcharts.chart('container', {
+    const chart = Highcharts.chart('chart-container', {
         chart: {
             type: 'line'
         },
