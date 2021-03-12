@@ -1,11 +1,11 @@
 function createChart(DamageCount18, DamageCount19, DamageCount20, DamageCount21) {
     console.log('DOM fully loaded and parsed');
-    const chart = Highcharts.chart('chart-container', {
+    const chart = Highcharts.chart('container', {
         chart: {
             type: 'line'
         },
         title: {
-            text: 'Member Reported Damages'
+            text: ''
         },
         xAxis: {
             categories: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
@@ -40,7 +40,7 @@ function createChart(DamageCount18, DamageCount19, DamageCount20, DamageCount21)
             type: 'column'
         },
         title: {
-            text: 'Member Reported Damages'
+            text: ''
         },
         xAxis: {
             categories: ['2018', '2019', '2020', '2021']

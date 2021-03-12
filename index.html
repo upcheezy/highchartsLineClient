@@ -1,28 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shippori+Mincho+B1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>First Highchart</title>
 </head>
+
 <body>
-    <div id='container'></div>
+    <nav>
+        <ul>
+            <li><a href="#">HOMEOWNERS</a></li>
+            <li><a href="#">EXCAVATORS</a></li>
+            <li><a href="#">MEMBERS</a></li>
+        </ul>
+    </nav>
 
-    <input type="checkbox" id="2018" name="2018" value="2018" checked>
-    <label for="2018">2018</label><br>
-    <input type="checkbox" id="2019" name="2019" value="2019" checked>
-    <label for="2019">2019</label><br>
-    <input type="checkbox" id="2020" name="2020" value="2020" checked>
-    <label for="2020">2020</label><br>
-    <input type="checkbox" id="2021" name="2021" value="2021" checked>
-    <label for="2021">2021</label><br>
+    <main>
+        <img src="images/Full-Title-Logo-Full-Color-RGB-1600px@72ppi.png" alt="sc811 logo" width="300" height="150">
+        <div id="main-banner">DAMAGE STATISTICS</div>
 
-    <div id='barchart'></div>
+        
+        <div id='flex-cont-line'>
+            <div data-aos="fade-right" class='left-line'>
+                <h3>Monthly Member Reported Damages</h3>
+                <p class='paragraph-text'>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p class="paragraph-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac turpis. In egestas erat
+                    imperdiet sed euismod nisi porta. Sapien pellentesque habitant morbi tristique. Ipsum faucibus vitae
+                    aliquet nec ullamcorper sit amet risus. Vel orci porta non pulvinar neque laoreet suspendisse
+                    interdum consectetur. Donec adipiscing tristique risus nec feugiat in fermentum posuere. Gravida
+                    rutrum quisque non tellus orci ac. Ipsum a arcu cursus vitae congue mauris rhoncus aenean vel. Id
+                    consectetur purus ut faucibus pulvinar. Enim eu turpis egestas pretium aenean pharetra magna. Dolor
+                    magna eget est lorem ipsum dolor sit.
+                </p>
+            </div>
+            <div data-aos="fade-left" class='right-line'>
+                <div id='container'></div>
+            </div>
+        </div>
 
+        <hr>
+        <hr>
+
+        <!-- <input type="checkbox" id="2018" name="2018" value="2018" checked>
+        <label for="2018">2018</label><br>
+        <input type="checkbox" id="2019" name="2019" value="2019" checked>
+        <label for="2019">2019</label><br>
+        <input type="checkbox" id="2020" name="2020" value="2020" checked>
+        <label for="2020">2020</label><br>
+        <input type="checkbox" id="2021" name="2021" value="2021" checked>
+        <label for="2021">2021</label><br> -->
+
+
+        <div id="flex-cont">
+            <div data-aos="fade-left" class='left-item'>
+                <div id='barchart'></div>
+            </div>
+            <div data-aos="fade-right" class='right-item'>
+                <h3>Member Reported Damages Over the Years</h3>
+                <p class='paragraph-text'>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p class="paragraph-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac turpis. In egestas erat
+                    imperdiet sed euismod nisi porta. Sapien pellentesque habitant morbi tristique. Ipsum faucibus vitae
+                    aliquet nec ullamcorper sit amet risus. Vel orci porta non pulvinar neque laoreet suspendisse
+                    interdum consectetur. Donec adipiscing tristique risus nec feugiat in fermentum posuere. Gravida
+                    rutrum quisque non tellus orci ac. Ipsum a arcu cursus vitae congue mauris rhoncus aenean vel. Id
+                    consectetur purus ut faucibus pulvinar. Enim eu turpis egestas pretium aenean pharetra magna. Dolor
+                    magna eget est lorem ipsum dolor sit.
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        });
+    </script>
     <script src="index.js"></script>
 </body>
+
 </html>
