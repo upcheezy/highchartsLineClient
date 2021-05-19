@@ -12,7 +12,7 @@ nav {
   height: 45px;
   background-color: black;
   border-bottom: white solid 1px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'PT Sans', Sans-Serif;
   font-size: 25px;
   display: flex;
   align-items: center;
@@ -53,7 +53,7 @@ a {
   font-size: 40px;
   color: white;
   font-weight: bold;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'PT Sans', Sans-Serif;
   z-index: 0;
 }
 
@@ -64,55 +64,98 @@ img {
   margin-left: 20px;
 }
 
-.left-item {
-  width: 50%;
-  height: 400px;
+#main-cont{
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
-.right-item {
-  width: 50%;
-  height: 400px;
-  padding: 20px;
-  font-family: 'Roboto', sans-serif;
+#flex-cont-nav{
+  border: solid red 3px;
+  width: 7%;
+  height: 100%;
+  float: left;
+  position: absolute;
 }
 
-.right-line {
-  width: 50%;
-  height: 400px;
+#side-year-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
-.left-line {
-  width: 50%;
-  height: 400px;
-  padding: 20px;
-  font-family: 'Roboto', sans-serif;
+.year-header {
+  text-align: center;
+  font-family: 'PT Sans', Sans-Serif;
+  font-size: 25px;
 }
 
-.paragraph-text {
-  font-size: 15px;
-  font-family: 'Shippori Mincho B1', serif;
+.year16 {
+  text-align: center;
+  font-family: 'PT Sans', Sans-Serif;
+  font-size: 25px;
+}
+
+.year16:hover{
+  background-color: greenyellow;
+  width: 100%;
+  cursor: pointer;
+}
+
+#chart-space {
+  width: 93%;
+  float: right;
+}
+
+.description-txt {
+  font-family: 'Playfair Display', Sans-Serif;
+  font-size: 20px;
+  width: 75%;
+  margin-left: 45px;
 }
 
 #container {
-  width: 100%;
+  width: 75%;
   height: 400px;
+  position: relative;
+  margin: 5px;
 }
 
 #barchart {
-  /* width: 50%; */
+  width: 75%;
   height: 400px;
+  margin: 5px;
+  font-size: 30px;
+  line-height: 1.5;
+  margin: auto;
 }
 
-#flex-cont {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  background-color: lightgrey;
+#barchart p {
+  margin-left: 11px;
 }
 
-#flex-cont-line {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  background-color: lightgrey;
+#damage-space {
+  background-color: darkgray;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
+
+h3 {
+  font-family: 'PT Sans', Sans-Serif;
+  width: 75%;
+  font-size: 30px;
+  margin-left: 45px;
+  margin-bottom: 0;
+}
+
+#damage-flex {
+  display: flex;
+  flex-direction: row;
+}
+
